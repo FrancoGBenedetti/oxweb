@@ -1,0 +1,56 @@
+*{
+	font-family: 'Roboto', sans-serif;
+}
+
+.demo{
+	border: 1px solid white;
+	height: 300px;
+}
+
+body{
+	margin: 10px;
+	background-color: #474747;
+}
+footer{
+	background-color: #272727;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.logo-box{
+	text-align: center;
+}
+
+.mr-top{
+	margin-top: 10px;
+}
+
+.mr-bot{
+	margin-bottom: 10px;
+}
+
+.mr-right{
+	margin-right: 10px;
+}
+
+.no-pad{
+	padding-right: 0px !important;
+	padding-left: 0px !important;
+}
+.pad-r{
+	padding-left: 0px !important;
+}
+.logo{
+	width: 100px;
+
+}
+.logo-caption{
+	width: 200px !important;
+}
+.carousel-caption{
+	width: 100% !important;
+	left: 0 !important;
+	right: 0 !important;
+	background-color: rgba(33, 33, 33, 0.3);
+	padding-top: 30px !important;
+	padding-bottom: 30px !important;
+}
