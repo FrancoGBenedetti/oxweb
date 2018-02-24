@@ -1,0 +1,141 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+*{
+	font-family: 'Roboto', sans-serif;
+	box-sizing: border-box;
+}
+
+.demo{
+	border: 1px solid white;
+	height: 300px;
+}
+
+nav{
+	background: linear-gradient(to right, #474747 , #272727);
+}
+
+body{
+	margin: 10px;
+
+	background: linear-gradient(to left, #474747 , #272727);
+}
+footer{
+	background-color: #272727;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.logo-box{
+	text-align: center;
+}
+.footer-logo{
+	width: 300px !important;
+}
+
+.mr-top{
+	margin-top: 10px;
+}
+
+.mr-bot{
+	margin-bottom: 10px;
+}
+
+.mr-right{
+	margin-right: 10px;
+}
+
+.no-pad{
+	padding-right: 0px !important;
+	padding-left: 0px !important;
+}
+.pad-r{
+	padding-left: 0px !important;
+}
+.logo{
+	width: 100px;
+
+}
+.logo-caption{
+	width: 200px !important;
+}
+.carousel-caption{
+	width: 100% !important;
+	left: 0 !important;
+	right: 0 !important;
+	background-color: rgba(33, 33, 33, 0.3);
+	padding-top: 30px !important;
+	padding-bottom: 30px !important;
+}
+
+figcaption{
+	position: absolute;
+   bottom: 10px;
+   left: 0;
+
+  	padding: 10px;
+   color: white !important;
+   font-size: 40px !important;
+   font-weight: bolder !important;
+  background-color: rgba(33, 33, 33, 0.5);
+}
+.figure{
+	margin: 0px !important;
+}
+
+.link-img{
+	position: relative !important;
+}
+
+.lumi-link{
+	display: inline-block !important;
+    width: 100% !important;
+    text-align: right !important;
+}
+// css footer
+footer{
+  color: white;
+}
+footer a{
+  color: #bfffff;
+}
+footer a:hover{
+  color: white;
+}
+
+.footer-bottom{
+  background: #464646b0;
+  padding: 2em;
+}
+.footer-top{
+  background: #2d4958;
+}
+.footer-middle{
+   background: #464646;
+  padding-top: 2em;
+  color: white;
+}
+/**Sub Navigation**/
+.subnavigation-container{
+  background: #3d6277;
+}
+.subnavigation .nav-link{
+  color: white;
+  font-weight: bold;
+}
+.subnavigation-container{
+  text-align: center;
+}
+.subnavigation-container .navbar{
+  display: inline-block;
+  margin-bottom: -6px; /* Inline-block margin offffset HACK -Gilron */
+}
+.col-subnav a{
+  padding: 1rem 1rem;
+  color: white;
+  font-weight: bold;
+}
+.col-subnav .active{
+  border-top:5px solid orange;
+ background: white;
+  color: black;
+}
