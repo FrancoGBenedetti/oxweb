@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   end
 
   def catalogue
+    @products = Product.all
   end
 
   def about

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :products
+  resources :products do
+    collection { post :import }
+  end
   
   get 'pages/index'
 

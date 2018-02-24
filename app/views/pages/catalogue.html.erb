@@ -22,16 +22,17 @@
         <label class="custom-control-label" for="customCheck4">Categoria 1</label>
       </div>
     </div>
-
-    <div class="col-md-3">
+    <% @products.each do |product| %>
+    <div class="col-md-3 mt-3">
       <div class="card" style="width: 14rem;">
-        <img class="card-img-top" src="..." alt="Card image cap">
+        <%= image_tag 'H1.jpg', class: 'card-img-top' %>
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-secondary">Go somewhere</a>
+          <h5 class="card-title"><%= product.tipo %></h5>
+          <p class="card-text"><%= product.descripcion %></p>
+          <%= link_to 'ver', product_path(product), class: 'btn btn-secondary text-white' %>
         </div>
       </div>
     </div>
+    <% end %>
     </div>
   </div>
