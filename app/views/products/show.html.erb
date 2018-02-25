@@ -1,44 +1,90 @@
-_<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Cod:</strong>
-  <%= @product.cod %>
-</p>
 
-<p>
-  <strong>Tipo:</strong>
-  <%= @product.tipo %>
-</p>
+<div class="container-fluid mr-top w-body show-product ">
+  <div class="row">
+    <div class="col-md-4">
+      <figure class="figure">
+      
+        <%= image_tag 'H1.jpg', class: 'figure-img img-fluid' %>
+      </figure>
 
-<p>
-  <strong>Descripcion:</strong>
-  <%= @product.descripcion %>
-</p>
+      
+    </div>
 
-<p>
-  <strong>Medidas:</strong>
-  <%= @product.medidas %>
-</p>
 
-<p>
-  <strong>Material:</strong>
-  <%= @product.material %>
-</p>
+    <div class="col-md-4 "> 
+      <div class="description-box">
+        <ul>
+          <li>
+            <p>
+              <strong>Cod:</strong>
+              <%= @product.cod %>
+            </p>
+          </li>
 
-<p>
-  <strong>Proveedor:</strong>
-  <%= @product.proveedor %>
-</p>
+          <li>
+            <p>
+              <strong>Tipo:</strong>
+              <%= @product.tipo %>
+            </p>
+            
+          </li>
 
-<p>
-  <strong>Codigo-provedor:</strong>
-  <%= @product.codigo_provedor %>
-</p>
+          <li>
+            <p>
+              <strong>Descripcion:</strong>
+              <%= @product.descripcion %>
+            </p>
+          </li>
 
-<p>
-  <strong>Precio-usa:</strong>
-  <%= @product.precio_usa %>
-</p>
+          <li>
+            <p>
+              <strong>Medidas:</strong>
+              <%= @product.medidas %>
+            </p>
+          </li>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+          <li>
+            <p>
+              <strong>Material:</strong>
+              <%= @product.material %>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <strong>Proveedor:</strong>
+              <%= @product.proveedor %>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <strong>Codigo-provedor:</strong>
+              <%= @product.codigo_provedor %>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <strong>Precio-usa:</strong>
+              <%= @product.precio_usa %>
+            </p>
+          </li>
+
+          <li>
+              <%= link_to 'Edit', edit_product_path(@product) %> |
+               <%= link_to 'Back', products_path %>
+          </li>
+        </ul>
+      </div>
+      
+    
+
+
+      <p id="notice"><%= notice %></p>
+
+    </div>
+  </div>
+  
+</div>

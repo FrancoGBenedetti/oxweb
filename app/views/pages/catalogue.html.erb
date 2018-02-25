@@ -1,6 +1,13 @@
-<div class="container">
+
+<div class="w-body mr-top">
+  
+
+
+
+
+  <div class="container cat-menu mr-top">
   <div class="row">
-    <div class="col-md-3 bg-secondary mb-0">
+    <div class="col-md-3 menu-cat-col">
       <h3> Categorías</h3>
       <div class="custom-control custom-checkbox">
         <input type="checkbox" class="custom-control-input" id="customCheck1">
@@ -22,17 +29,30 @@
         <label class="custom-control-label" for="customCheck4">Categoria 1</label>
       </div>
     </div>
-    <% @products.each do |product| %>
-    <div class="col-md-3 mt-3">
-      <div class="card" style="width: 14rem;">
-        <%= image_tag 'H1.jpg', class: 'card-img-top' %>
-        <div class="card-body">
-          <h5 class="card-title"><%= product.tipo %></h5>
-          <p class="card-text"><%= product.descripcion %></p>
-          <%= link_to 'ver', product_path(product), class: 'btn btn-secondary text-white' %>
-        </div>
+  </div>
+  </div>
+
+
+
+  <div class="container mr-top">
+    <div class="row">
+
+       <div class="offset-md-3 col-md-9">
+
+        <% @products.each do |product| %>
+       
+          <div class="card mr-top align-top" style="width: 14rem;">
+            <%= image_tag 'H1.jpg', class: 'card-img-top' %>
+            <div class="card-body">
+              <h5 class="card-title"><%= product.tipo %></h5>
+              <p class="card-text"><%= product.descripcion %></p>
+              <%= link_to 'ver', product_path(product), class: 'btn btn-secondary text-white' %>
+            </div>
+          </div>
+        
+        <% end %>
       </div>
     </div>
-    <% end %>
-    </div>
   </div>
+
+</div>
