@@ -1,0 +1,57 @@
+<%= form_with(model: product, local: true) do |form| %>
+  <% if product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cod %>
+    <%= form.text_field :cod, id: :product_cod %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo %>
+    <%= form.text_field :tipo, id: :product_tipo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_field :descripcion, id: :product_descripcion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :medidas %>
+    <%= form.text_field :medidas, id: :product_medidas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :material %>
+    <%= form.text_field :material, id: :product_material %>
+  </div>
+
+  <div class="field">
+    <%= form.label :proveedor %>
+    <%= form.text_field :proveedor, id: :product_proveedor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :codigo_provedor %>
+    <%= form.text_field :codigo_provedor, id: :product_codigo_provedor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :precio_usa %>
+    <%= form.text_field :precio_usa, id: :product_precio_usa %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
