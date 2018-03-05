@@ -1,5 +1,6 @@
 require 'csv'
 class Product < ApplicationRecord
+  has_many :photos
   def self.import(file)
     CSV.foreach(file.path, headers: true,
                            col_sep: ',',

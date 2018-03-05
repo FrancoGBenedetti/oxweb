@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
+
+  devise_for :users, controllers: {
+    sessions: 'user/sessions',
+    registrations: 'user/registrations'
+  }
+
   resources :products do
     collection { post :import }
+    resources :photos, only: [:create, :destroy]
   end
-  
+
   get 'pages/index'
 
   get 'pages/catalogue'
@@ -10,6 +17,8 @@ Rails.application.routes.draw do
   get 'pages/about'
 
   get 'pages/contact'
+
+  get 'admin/dashboard'
 
   root 'pages#index'
 
