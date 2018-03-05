@@ -1,0 +1,16 @@
+<table class="table table-hover text-white">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Actions</th>
+      <th></th>
+    </tr>
+  </thead>
+  <% @products.each do |product| %>
+    <tr>
+      <td><%= link_to product.tipo, product_path(product) %></td>
+      <td><%= link_to 'Editar', edit_product_path(product), class: 'btn btn-info' %></td>
+      <td><%= link_to 'Borrar', product, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+    </tr>
+  <% end %>
+</table>

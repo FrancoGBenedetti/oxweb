@@ -2,5 +2,20 @@
 
 <%= render 'form', product: @product %>
 
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>
+
+
+<h2>Imagenes</h2>
+<%= form_with model: [@product, Photo.new], local: true do |f| %>
+  <%= f.file_field :image %>
+  <%= f.submit %>
+<% end %>
+
+
+<div class="row">
+  <% @product.photos.each do |photo| %>
+  <div class="col-md-4">
+    <%= image_tag photo.image, width: '200px' %>
+    <%= link_to 'x', product_photo_path(@product, photo), method: :delete, class:'btn btn-danger btn-sm' %>
+  </div>
+  <% end %>
+</div>
