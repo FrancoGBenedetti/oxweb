@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
 
-  devise_for :users, controllers: {
-    sessions: 'user/sessions',
-    registrations: 'user/registrations'
-  }
+  devise_for :users
+
+
 
   resources :products do
     collection { post :import }
