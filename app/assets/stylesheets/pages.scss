@@ -32,6 +32,12 @@ footer{
 	width: 300px !important;
 }
 
+.middle-align{
+	display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .mr-top{
 	margin-top: 10px;
 }
@@ -66,6 +72,41 @@ footer{
 	padding-top: 30px !important;
 	padding-bottom: 30px !important;
 }
+
+.bkg-img{
+
+}
+
+//////////ox index//////////
+.carousel-caption{
+	text-align: left !important;
+	p{
+		text-align: justify;
+	}
+}
+
+
+.carousel-inner{
+	.carousel-item{
+		height: 80vh !important;
+	}
+
+}
+
+
+//////////ox index end ///////////
+
+////////mh3////////////
+.mh-main-info{
+	color:white;
+	border-top: 1px solid #c8c8c8;
+	p{
+		padding: 10px;	
+	}
+	
+}
+
+/////mh3 end/////////////
 
 figcaption{
 	position: absolute;
@@ -114,6 +155,19 @@ footer a:hover{
   padding-top: 2em;
   color: white;
 }
+
+
+///////////aboutcss////////////
+.about-container{
+	background: linear-gradient(to bottom right, white, #c8c8c8);
+	.about-info{
+		padding: 20px;
+		color: #575757;
+		text-align: justify;
+	}
+}
+
+/////////about css end////////
 /**Sub Navigation**/
 .subnavigation-container{
   background: #3d6277;
