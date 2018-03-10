@@ -42,7 +42,7 @@
         <% @products.each do |product| %>
        
           <div class="card mr-top align-top" style="width: 14rem;">
-            <%= image_tag 'H1.jpg', class: 'card-img-top' %>
+            <%= image_tag product.photos.first.image, class: 'card-img-top' %>
             <div class="card-body">
               <h5 class="card-title"><%= product.tipo %></h5>
               <p class="card-text"><%= product.descripcion %></p>

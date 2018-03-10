@@ -5,7 +5,19 @@
 
 
 /* CSS for the loading div */
-
+*{
+	box-sizing: border-box;
+}
+.product-show{
+	background: linear-gradient(white, #d8d8d8);
+	padding: 0px 20px 0px 20px;
+	.product-title-show{
+		font-size: 50px;
+	}
+	h5{
+		font-weight: bolder;
+	}
+}
 .sp-loading {
 	text-align: center;
 	max-width: 270px;
@@ -32,7 +44,7 @@
 	  Set max-width to your thumbnail width
 	***************/
 
-	max-width: 300px;
+	/*max-width: 300px;*/
 }
 
 /* Thumbnails */
