@@ -1,11 +1,48 @@
+<div class="container-fluid product-show">
 
-<div class="row">
-  <div class="col-md-3 offset-md-1 mt-5">
-    <div class="sp-loading"><%= image_tag 'sp-loading.gif' %><br>Cargando imagenes</div>
-    <div class="sp-wrap">
-      <% @product.photos.each do |photo| %>
-    	  <a href="<%= photo.image %>"><%= image_tag photo.image %></a>
-      <% end %>
-    </div>
-  </div>
+	<div class="row product-show mt-3">
+		<div class="col-md-12 mt-5">
+			<h5 class="product-title-show"><%= @product.tipo %></h5>
+		</div>
+
+	  <div class="col-md-5 mt-3">
+	    <div class="sp-loading"><%= image_tag 'sp-loading.gif' %><br>Cargando imagenes</div>
+	    <div class="sp-wrap">
+	      <% @product.photos.each do |photo| %>
+	    	  <a href="<%= photo.image %>"><%= image_tag photo.image %></a>
+	      <% end %>
+	    </div>
+	  </div>
+
+	  <div class="col-md-7 mt-3 mb-3">
+
+	  	<ul class="list-group">
+
+		  <li class="list-group-item">
+		  	<h5>Descripcion</h5>
+		  	<%= @product.descripcion %></li>
+		  <li class="list-group-item">
+		  	<h5>Medidas</h5>
+		  	<%= @product.medidas %></li>
+		  <li class="list-group-item">
+		  	<h5>Material</h5>
+		  	<%= @product.material %></li>
+		  <li class="list-group-item">
+		  	<h5>Cod</h5>
+		  	<%= @product.cod %></li>
+		  	<li class="list-group-item text-right">
+		  		<a class="" href="<%= pages_catalogue_path %>">
+					<button class="btn btn-primary btn-lg btn-success">
+						Catalogo
+					</button>
+				</a>
+		  	</li>
+		</ul>
+	  
+	  </div>
+	</div>
+
+	
+	
 </div>
+
