@@ -43,28 +43,18 @@
 
 <div class="container-fluid ">
   <div class="row">
-    <div class="col-md-4 pad-r mt-3">
-      <div class="">
-        <figure class="figure">
-          <%= image_tag 'H1.jpg', class: 'link-img img-fluid' %>
-          <figcaption class="figure-caption ">Catalogo</figcaption>
-        </figure>
+    
+    <div class="col-md-12 no-pad mt-3">
+      <div class="d-flex flex-row product-carousel">
 
-      </div>
-    </div>
-    <div class="col-md-8 no-pad mt-3">
-      <div class="row ">
+              <%= image_tag 'H1.jpg', class: 'link-img img-fluid p-2 align-middle' %>
+
         <%  @products.each do |product|%>
-            <div class="col-md-4">
-              <figure class="figure">
-              <%= image_tag product.photos.first.image, class: 'figure-img img-fluid' %>
-              </figure>
-            </div>
-      
+
+              <%= image_tag product.photos.first.image, class: 'figure-img img-fluid p-2 align-middle' %>
+
         <% end %>
-        
-       
-        
+
       </div>
     
     </div>
@@ -73,32 +63,25 @@
 
 <div class="container-fluid ">
   <div class="row">
-    <div class="col-md-8  pad-r mt-3">
-      <div class="row ">
-        <%  @products.each do |product|%>
-            <div class="col-md-4">
-              <figure class="figure">
-              <%= image_tag product.photos.first.image, class: 'figure-img img-fluid' %>
-              </figure>
-            </div>
-      
-        <% end %>
-        
-       
-        
-      </div>
-    </div>
+    
+    <div class="col-md-12 no-pad mt-3">
+      <div class="d-flex flex-row product-carousel">
 
-    <div class="col-md-4 no-pad mt-3">
-      <div class="">
-        <figure class="figure">
-          <%= image_tag 'H1.jpg', class: 'link-img img-fluid' %>
-          <figcaption class="figure-caption ">SALE</figcaption>
-        </figure>
+              <%= image_tag 'H1.jpg', class: 'link-img img-fluid p-2 align-middle' %>
+
+        <%  @products.each do |product|%>
+
+              <%= image_tag product.photos.first.image, class: 'figure-img img-fluid p-2 align-middle' %>
+
+        <% end %>
+
       </div>
+    
     </div>
   </div>
 </div>
+
+
 
 <div class="container-fluid">
   <div class="row">
