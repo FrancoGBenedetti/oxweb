@@ -1,9 +1,9 @@
 class PagesController < ApplicationController
   def index
   @products = []
-  3.times do
-    @products << Product.all.sample
-  end
+  @products << Product.find_by(cod: '180013')
+  @products << Product.find_by(cod: '180012')
+  @products << Product.find_by(cod: '180011')
 
   end
 
