@@ -5,7 +5,6 @@ class PagesController < ApplicationController
     @products << Product.all.sample
   end
 
-    
   end
 
   def catalogue
