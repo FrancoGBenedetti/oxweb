@@ -7,25 +7,27 @@
 }
 
 .elegant{
-	box-shadow: 1px 1px 2px #141414;
+	box-shadow: 1px 1px 2px #070707;
 	
+}
+.bkg-full-pro{
+	height: 100%;
+     background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: left top;
+    .ghost{
+		opacity: 0;
+    	filter: alpha(opacity=50)
+	}
+}
+
+.bkg-1{
+	background-image: url(/assets/Ortuzar2.jpg);
 }
 
 .image-wrapper{
 	position: relative;
 	box-sizing: border-box;
-	background-image: url(/assets/Ortuzar2.jpg);
-	background-repeat: no-repeat;
-     background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: left top;
-	.ghost{
-		opacity: 0;
-    	filter: alpha(opacity=50)
-	}
-	.card{
-		paddig: 20px;
-	}
 
 	h3{
 		position: absolute;
@@ -39,6 +41,28 @@
 	    font-size: 3vw;
 	    box-sizing: border-box;
 	}
+	h4{
+		position: absolute;
+	    left: 10px;
+	    right: 10px;
+	    bottom: 1%;
+	    padding: 3%;
+	    width: 80%;
+	    color: #FFF;
+	    text-align: right;
+	    background-color: rgba(0, 0, 0, 0.78);
+	    font-size: 1vw;
+	    box-sizing: border-box;
+	    -webkit-transition: bottom 0.3s; /* Safari */
+    	transition: bottom 0.3s;
+    	-webkit-transition: box-shadow 0.3s; /* Safari */
+    	transition: box-shadow 0.3s;
+	}
+	h4:hover{
+		bottom: 2%;
+		box-shadow: 1px 1px 2px 1px #474747;
+		
+	}
 }
 
 
@@ -50,6 +74,7 @@
 
 .product-carousel{
 	border: 1px solid #c8c8c8;
+
 
 }
 
@@ -147,6 +172,9 @@ footer{
 	}
 	
 }
+.product-carousel{
+	height:30% !important;
+}
 
 .image-wrapper-mh3{
 	position: relative;
@@ -160,9 +188,7 @@ footer{
 		opacity: 0;
     	filter: alpha(opacity=50)
 	}
-	.card{
-		paddig: 20px;
-	}
+
 
 	.cap{
 		position: absolute;
@@ -270,9 +296,7 @@ footer a:hover{
 }
 
 
-.card{
-	display: inline-block !important;
-}
+
 
 .card:hover{
 	box-shadow: 0px 1px 1px #c8c8c8;

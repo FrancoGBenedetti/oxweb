@@ -42,43 +42,53 @@
 
 
 
-
-
-
-<div class="container-fluid ">
-  <div class="row">
-
-    <div class="mt-3">
-      <div class="d-flex flex-row product-carousel elegant">
-
-            <div class="image-wrapper p-2">
+<div class="container-fluid">
+  <div class="row mt-3 product-carousel elegant ">
+    <div class="col-md-3 no-pad">
+      <div class="image-wrapper bkg-full-pro bkg-1">
               
               <%= image_tag 'H1.jpg', class: 'link-img img-fluid  align-middle ghost ' %>
               <h3 class="">
                 Catalogo
-                <%= link_to  %>
-                <button class="btn btn-outline-success">Ver Más</button>
+                <a class="" href="<%= pages_catalogue_path %>">
+                 <button class="btn btn-outline-success">Ver Más</button>
+                </a>
+               
               </h3>
-
-            </div>
-
-          <div class="p-2" >
-           <%= image_tag 'index-cat1.png', class: 'img-fuild elegant', width: '300px' %>
           </div>
-          <div class="p-2" >
-           <%= image_tag 'index-cat2.png', class: 'img-fuild elegant', width: '300px' %>
-          </div>
-          <div class="p-2" >
-           <%= image_tag 'index-cat3.png', class: 'img-fuild elegant', width: '300px' %>
-          </div>
+    </div>
+    <div class="col-md-3">
+      <figure class="figure">
+        
 
+        <div class="image-wrapper" >
+          <%= image_tag 'index-cat1.png', class: 'm-2 elegant img-fuild ', style: 'width: 100%'%>
+          <a href="<%= pages_catalogue_path %>">
+            <h4>Ver Producto</h4>
+          </a>
+        </div>
+
+      </figure>
+    </div>
+
+    <div class="col-md-3">
+      <div class="image-wrapper" >
+        <%= image_tag 'index-cat2.png', class: 'm-2 elegant img-fuild ', style: 'width: 100%'%>
+        <a href="<%= pages_catalogue_path %>">
+          <h4>Ver Producto</h4>
+        </a>
       </div>
-
+    </div>
+    <div class="col-md-3">
+      <div class="image-wrapper" >
+        <%= image_tag 'index-cat3.png', class: 'm-2 elegant img-fuild ', style: 'width: 100%'%>
+        <a href="<%= pages_catalogue_path %>">
+          <h4>Ver Producto</h4>
+        </a>
+      </div>
     </div>
   </div>
 </div>
-
-
 
 
 
