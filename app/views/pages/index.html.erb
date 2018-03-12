@@ -1,4 +1,4 @@
-<div id="carouselExampleIndicators" class="carousel slide mr-top mr-bottom" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide mr-top mr-bottom elegant" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -49,22 +49,27 @@
   <div class="row">
 
     <div class="mt-3">
-      <div class="d-flex flex-row product-carousel">
+      <div class="d-flex flex-row product-carousel elegant">
 
             <div class="image-wrapper p-2">
-
+              
               <%= image_tag 'H1.jpg', class: 'link-img img-fluid  align-middle ghost ' %>
-              <h3 class="">Catalogo</h3>
+              <h3 class="">
+                Catalogo
+                <%= link_to  %>
+                <button class="btn btn-outline-success">Ver Más</button>
+              </h3>
+
             </div>
 
           <div class="p-2" >
-           <%= image_tag 'index-cat1.png', class: 'img-fuild', width: '300px' %>
+           <%= image_tag 'index-cat1.png', class: 'img-fuild elegant', width: '300px' %>
           </div>
           <div class="p-2" >
-           <%= image_tag 'index-cat2.png', class: 'img-fuild', width: '300px' %>
+           <%= image_tag 'index-cat2.png', class: 'img-fuild elegant', width: '300px' %>
           </div>
           <div class="p-2" >
-           <%= image_tag 'index-cat3.png', class: 'img-fuild', width: '300px' %>
+           <%= image_tag 'index-cat3.png', class: 'img-fuild elegant', width: '300px' %>
           </div>
 
       </div>
@@ -77,9 +82,9 @@
 
 
 
-<div class="container-fluid">
+<div class="container-fluid ">
   <div class="row">
-    <div class="col-md-12 no-pad mt-3">
+    <div class="col-md-12 no-pad mt-3 elegant">
       <div class="">
         <figure class="figure">
           <%= image_tag 'slide11.png', class: 'img-fluid' %>
