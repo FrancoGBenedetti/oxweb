@@ -37,18 +37,20 @@
   <div class="container mr-top">
     <div class="row">
 
-       <div class="offset-md-3 col-md-9">
+       <div class="offset-md-2 col-md-10">
           <div class="row">
             <% @products.each do |product| %>
-
-              <div class="card mr-top align-top col-md-4 p-1" style="width: 14rem;">
-                <%= image_tag product.photos.first.image, class: 'card-img-top' %>
-                <div class="card-body">
-                  <h5 class="card-title"><%= product.tipo %></h5>
-                  <p class="card-text"><%= product.descripcion %></p>
-                  <%= link_to 'ver', product_path(product), class: 'btn btn-secondary text-white' %>
+              <div class="col-md-4 p-1">
+                <div class="card mr-top align-top" style="width: 14rem;">
+                  <%= image_tag product.photos.first.image, class: 'card-img-top' %>
+                  <div class="card-body">
+                    <h5 class="card-title"><%= product.tipo %></h5>
+                    <p class="card-text"><%= product.descripcion %></p>
+                    <%= link_to 'ver', product_path(product), class: 'btn btn-secondary text-white' %>
+                  </div>
                 </div>
               </div>
+                
 
             <% end %>
 
