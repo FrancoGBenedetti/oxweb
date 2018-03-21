@@ -27,12 +27,25 @@
 }
 
 .bkg-1{
-	background-image: url(<%= asset_path 'Ortuzar2.jpg' %>);
+	background-image: url('Ortuzar2.jpg');
+}
+div{
+	overflow: hidden;
+}
+.parent-link:hover .link-to-projects{
+  transform: scale(1.02);
+  overflow: hidden;
+
+}
+
+.link-to-projects{
+	transition: all .8s;
 }
 
 .image-wrapper{
 	position: relative;
 	box-sizing: border-box;
+	overflow: hidden;
 
 	h3{
 		position: absolute;
