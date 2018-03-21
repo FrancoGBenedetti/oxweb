@@ -7,6 +7,8 @@
 }
 
 
+
+
 .elegant{
 	box-shadow: 1px 1px 2px #070707;
 
@@ -254,12 +256,17 @@ figcaption{
 // css footer
 footer{
   color: white;
+  h2{
+  	font-weight: bolder;
+
+  }
+  
 }
 footer a{
-  color: #bfffff;
+  color: #474747;
 }
 footer a:hover{
-  color: white;
+  color: #565656;
 }
 
 .footer-bottom{
@@ -267,12 +274,19 @@ footer a:hover{
   padding: 2em;
 }
 .footer-top{
-  background: #2d4958;
+  background: #c8c8c8;
 }
 .footer-middle{
-   background: #464646;
+   background: linear-gradient(white, #d8d8d8);
   padding-top: 2em;
-  color: white;
+  color: #474747;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
+}
+.logos-footer{
+	text-align: right;
+	ul{
+		list-style: none !important;
+	}
 }
 
 
