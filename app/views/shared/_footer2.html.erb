@@ -58,3 +58,10 @@
     </div>
   </div>
 </footer>
+<script>
+  if ('<%= params[:controller] %>/<%= params[:action] %>'== 'pages/index') {
+    $('a[href="/"]').parent('li').addClass('active');
+  }else {
+    $('a[href="/<%= params[:controller] %>/<%= params[:action] %>"]').parent('li').addClass('active');
+  }
+</script>

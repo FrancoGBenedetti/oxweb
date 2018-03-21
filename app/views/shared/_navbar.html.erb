@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark elegant">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="<%= root_path %>">
     <%= image_tag 'logo.png', class: 'logo' %>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,8 +8,8 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="<%= root_path %>">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="<%= root_path %>">Home </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="<%= pages_about_path %>">Sobre Ox</a>
@@ -17,11 +17,9 @@
       <li class="nav-item">
         <a class="nav-link" href="<%= pages_catalogue_path %>">Catalogo</a>
       </li>
-
-      
     </ul>
 
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="<%= pages_mh3_path %>">
       <%= image_tag 'Logo-02.png', class: 'logo' %>
     </a>
   </div>

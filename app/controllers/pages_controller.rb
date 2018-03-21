@@ -16,4 +16,7 @@ class PagesController < ApplicationController
 
   def contact
   end
+  
+  def mh3
+  end
 end
