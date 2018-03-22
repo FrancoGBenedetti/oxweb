@@ -6,18 +6,27 @@
 
 /* CSS for the loading div */
 *{
+	font-family: 'Montserrat', sans-serif;
 	box-sizing: border-box;
 }
 .product-show{
 	background: linear-gradient(white, #d8d8d8);
 	padding: 0px 20px 0px 20px;
 	.product-title-show{
-		font-size: 50px;
+		font-size: 2rem;
 	}
-	h5{
-		font-weight: bolder;
+	ul{
+		h5{
+			font-weight:bolder;
+			font-size: 1rem;
+		}
+		.list-group-item{
+			background: none !important;
+		}
 	}
+	
 }
+
 .sp-loading {
 	text-align: center;
 	max-width: 270px;
