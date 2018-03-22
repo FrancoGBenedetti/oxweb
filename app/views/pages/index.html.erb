@@ -11,16 +11,18 @@
 
         <div class="container">
           <div class="row">
-            <div class="col-md-6 d-flex align-items-center">
-              <%= image_tag 'logo.png', class: 'logo-caption' %>
-              <%= image_tag 'Logo-02.png', class: 'logo' %>
-            </div>
-            <div class="col-md-6 d-flex align-items-center">
-
-                <p >
+            
+            <div class="offset-md-4 col-md-4 caption-box ">
+                <figure class="figure">
+                  <%= image_tag 'iso.png', class: 'logo-caption' %>
+                </figure>
+                <p>
                    Importación y comercialización de accesorios de acero
                   inoxidable que se incorporan en baños, cocinas y otros espacios de una vivienda
                 </p>
+                <figure class="figure">
+                  <%= image_tag 'Logo-02.png', class: 'logo' %>
+                </figure>
             </div>
           </div>
         </div>
@@ -92,21 +94,4 @@
 
 
 
-<div class="container-fluid ">
-  <div class="row">
-    <div class="col-md-12 no-pad mt-3 elegant parent-link">
-      <div class="link-to-projects">
-        <figure class="figure">
-          <%= image_tag 'slide11.png', class: 'img-fluid' %>
-          <a href="http://lumichile.com/" target="_blank">
-            <figcaption class="figure-caption lumi-link">
-              <button class="btn btn-outline-warning btn-lg">
-                Ver Mas
-              </button>
-            </figcaption>
-          </a>
-        </figure>
-      </div>
-    </div>
-  </div>
-</div>
+<%= render 'shared/lumi' %>
