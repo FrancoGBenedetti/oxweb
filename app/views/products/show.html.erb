@@ -1,11 +1,11 @@
-<div class="container-fluid product-show">
+<div class="container-fluid product-show mt-3">
 
-	<div class="row product-show mt-3">
-		<div class="col-md-12 mt-5">
+	<div class="row product-show ">
+		<div class="col-md-12 pt-5 text-right">
 			<h5 class="product-title-show"><%= @product.tipo %></h5>
 		</div>
 
-	  <div class="col-md-5 mt-3">
+	  <div class="col-md-5 ">
 	    <div class="sp-loading"><%= image_tag 'sp-loading.gif' %><br>Cargando imagenes</div>
 	    <div class="sp-wrap">
 	      <% @product.photos.each do |photo| %>
