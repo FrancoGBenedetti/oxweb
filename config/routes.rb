@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
 
+  get 'orders/index'
+
+  get 'orders/create'
+
+  get 'orders/destroy'
+
   devise_for :users
 
 
 
   resources :products do
+    resources :orders, only: :create
     collection { post :import }
     resources :photos, only: [:create, :destroy]
   end

@@ -1,0 +1,25 @@
+
+<% if @orders.size == 0 %>
+  <h4>No tienes productos para cotizar</h4>
+  <h5>vuelve al catalogo para agregar <%= link_to 'catalogo', pages_catalogue_path %></h5>
+<% else %>
+  <!-- <table class="table table-hover">
+    <thead>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table> -->
+  <% @orders.each do |order| %>
+    order.product.name
+  <% end %>
+<% end %>

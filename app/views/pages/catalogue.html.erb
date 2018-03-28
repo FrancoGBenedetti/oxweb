@@ -32,8 +32,6 @@
   </div>
   </div>
 
-
-
   <div class="container mr-top">
     <div class="row">
 
@@ -47,15 +45,16 @@
                     <h5 class="card-title"><%= product.tipo %></h5>
                     <p class="card-text"><%= product.descripcion %></p>
                     <%= link_to 'ver', product_path(product), class: 'btn btn-secondary text-white' %>
+                    <%= link_to '+', product_orders_path(product.id), data: { remote: true, method: :post }, class: 'btn btn-success text-white' %>
                   </div>
                 </div>
               </div>
-                
+
 
             <% end %>
 
           </div>
-            
+
       </div>
     </div>
   </div>
