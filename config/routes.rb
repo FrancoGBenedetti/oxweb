@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get 'orders/destroy'
 
+  get 'orders/quote'
+
   devise_for :users
 
 

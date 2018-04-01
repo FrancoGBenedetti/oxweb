@@ -16,6 +16,11 @@ class OrdersController < ApplicationController
   def destroy
   end
 
+  def quote
+    UserMailer.quotation(current_user).deliver_now
+    redirect_to root_path, notice: 'tu cotización se envío te responderemos a la brevedad'
+  end
+
   private
     def set_num
       if current_user.present?
