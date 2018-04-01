@@ -16,6 +16,8 @@ Rails.application.routes.draw do
     resources :photos, only: [:create, :destroy]
   end
 
+  resources :orders, only: [:index]
+
   get 'pages/index'
 
   get 'pages/catalogue'

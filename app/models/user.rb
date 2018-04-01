@@ -5,4 +5,9 @@ class User < ApplicationRecord
   has_many :products, through: :orders
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+
+  def set_cart
+    Order.where(user_id: current_user.id, payed: false)
+  end
 end

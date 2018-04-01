@@ -17,8 +17,14 @@
       <li class="nav-item">
         <a class="nav-link" href="<%= pages_catalogue_path %>">Catalogo</a>
       </li>
+      <li class="nav-item">
+        <% if current_user.present? %>
+          <a class="btn btn-secondary text-light">
+            Productos <span class="badge badge-light" id="product-num">0</span>
+          </a>
+        <% end %>
+      </li>
     </ul>
-
     <a class="navbar-brand" href="<%= pages_mh3_path %>">
       <%= image_tag 'Logo-02.png', class: 'logo' %>
     </a>
