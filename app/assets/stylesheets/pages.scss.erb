@@ -1,9 +1,25 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$black-gradient-right: linear-gradient(to right, #474747 , #272727);
 *{
 	font-family: 'Montserrat', sans-serif;
 	box-sizing: border-box;
+}
+
+.header{
+	
+	.header-row{
+		background: $black-gradient-right;	
+	}
+	.logo{
+		width: 18rem;
+	}
+	.header-text{
+		text-align: center;
+		color: #f8f8f8;
+	}
 }
 
 
@@ -95,11 +111,24 @@ div{
 .product-carousel{
 	border: 1px solid #c8c8c8;
 
-
 }
 
 nav{
-	background: linear-gradient(to right, #474747 , #272727);
+	background: $black-gradient-right;
+	.nav-logo{
+		width: 8rem;
+	}
+	.mh3-brand-box{
+		border-right: 1px solid #c8c8c8;
+	}
+	.logos-list{
+		ul{
+			margin: 10px auto !important;
+			li{
+				list-style: none !important;
+			}
+		}
+	}
 }
 
 body{
@@ -107,17 +136,11 @@ body{
 
 	background: linear-gradient(to left, #474747 , #272727);
 }
-footer{
-	background-color: #272727;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
+
 .logo-box{
 	text-align: center;
 }
-.footer-logo{
-	width: 300px !important;
-}
+
 
 .middle-align{
 	display: flex;
@@ -144,10 +167,7 @@ footer{
 .pad-r{
 	padding-left: 0px !important;
 }
-.logo{
-	width: 100px;
 
-}
 .logo-caption{
 	width: 4rem !important;
 }
@@ -268,6 +288,10 @@ figcaption{
 }
 // css footer
 
+.colum-a{
+	font-size: .8rem;
+}
+
 .colum-b{
 	text-align: center;
 	img{
@@ -318,6 +342,18 @@ footer a:hover{
 	border-left: 1px solid #f8f8f8;
 	border-right: 1px solid #e8e8e8;
 }
+
+.footer-logo{
+	width: 300px !important;
+}
+
+footer{
+	background-color: #272727;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+///end footer///
 
 
 ///////////aboutcss////////////
