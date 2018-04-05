@@ -8,6 +8,22 @@ $black-gradient-right: linear-gradient(to right, #474747 , #272727);
 	box-sizing: border-box;
 }
 
+@mixin bkg-img-mixin($w-size, $h-size, $b-size){
+    position: relative;
+
+    width:  $w-size;
+    height: $h-size;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     $b-size;
+    padding: 1%;
+    margin: 0 auto;
+}
+
+.pro-box{
+	@include bkg-img-mixin(100%, 10rem, cover);
+}
+
 .header{
 	
 	.header-row{

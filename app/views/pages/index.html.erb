@@ -77,7 +77,19 @@
               </h3>
           </div>
     </div>
-    <div class="col-md-3 parent-link">
+
+    <div class="col-md-9">
+      <div class="carousel-pro">
+        <% @products.each do |product| %>
+          <div class="pro-box" style="background-image:url('<%= product.photos.first.image %>')">
+            <h5><%= product.tipo %></h5>
+            <%= link_to 'ver', product_path(product), class: 'btn btn-secondary text-white' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <!--<div class="col-md-3 parent-link">
       <figure class="figure">
 
 
@@ -106,9 +118,21 @@
           <h4>Ver Producto</h4>
         </a>
       </div>
-    </div>
+    </div>-->
+
   </div>
 </div>
+
+<script>
+  $('.carousel-pro').slick({
+      
+      slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000
+    })
+
+</script>
 
 
 

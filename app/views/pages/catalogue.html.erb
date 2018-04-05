@@ -60,9 +60,23 @@
   </div>
 
 </div>
-<div class="container w-body">
+<div class="container w-body someclass">
   <% @products.each do |product| %>
+  <div>
     <h5 ><%= product.tipo %></h5>
+  </div>
+    
   <% end %>
 </div>
+
+<script>
+  $('.someclass').slick({
+      
+      slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000
+    })
+
+</script>
 

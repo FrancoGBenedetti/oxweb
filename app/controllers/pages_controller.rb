@@ -1,10 +1,7 @@
 class PagesController < ApplicationController
   before_action :set_num, except: :mh3
   def index
-    @products = []
-    @products << Product.find_by(cod: '180013')
-    @products << Product.find_by(cod: '180012')
-    @products << Product.find_by(cod: '180011')
+    @products = Product.all
   end
 
   def catalogue
