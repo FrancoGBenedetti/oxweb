@@ -8,20 +8,46 @@ $black-gradient-right: linear-gradient(to right, #474747 , #272727);
 	box-sizing: border-box;
 }
 
-@mixin bkg-img-mixin($w-size, $h-size, $b-size){
+@mixin bkg-img-mixin($b-size){
     position: relative;
 
-    width:  $w-size;
-    height: $h-size;
+    
     background-position: 50% 50%;
     background-repeat:   no-repeat;
     background-size:     $b-size;
     padding: 1%;
     margin: 0 auto;
 }
+.logo{
+	width: 10px;
+}
 
 .pro-box{
-	@include bkg-img-mixin(100%, 10rem, cover);
+	@include bkg-img-mixin(cover);
+}
+
+.carousel-pro{
+	height: 100% !important;
+	.slick-list{
+		height: 100% !important;
+		.slick-track{
+			height: 100% !important;
+			.slick.slide{
+				display: flex !important;
+				align-items: stretch !important;
+				div{
+					display: flex !important;
+					align-items: stretch !important;
+					.pro-box{
+						display: flex !important;
+						align-items: stretch !important;
+					}
+				}
+			}
+
+		}
+		
+	}
 }
 
 .header{
