@@ -1,12 +1,13 @@
 <nav class="navbar navbar-expand-lg navbar-dark elegant">
   <a class="navbar-brand" href="<%= root_path %>">
-    <%= image_tag 'logo.png', class: 'logo' %>
+    
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link" href="<%= root_path %>">Home </a>
@@ -25,8 +26,29 @@
         <% end %>
       </li>
     </ul>
-    <a class="navbar-brand" href="<%= pages_mh3_path %>">
-      <%= image_tag 'Logo-02.png', class: 'logo' %>
-    </a>
+
+    <div class="brand-list text-left d-flex align-items-stretch">
+      
+        <div class="mh3-brand-box">
+          <a class="navbar-brand" href="<%= pages_mh3_path %>">
+            <%= image_tag 'Logo-02.png', class: 'nav-logo d-block' %>
+          </a>
+        </div>
+
+
+        <div class="logos-list">
+          <ul class="">
+           <li>
+              <%= image_tag 'logo.png', class: 'figure-img img-fluid ', width:'100rem' %>
+            </li>
+            <li>
+              <%= image_tag 'lumi.png', class: 'figure-img img-fluid ', width:'100rem' %>
+            </li>
+          </ul>
+        </div>
+      
+    </div>
+
   </div>
+
 </nav>
