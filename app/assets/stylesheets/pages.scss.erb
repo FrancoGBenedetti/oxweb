@@ -8,6 +8,41 @@ $black-gradient-right: linear-gradient(to right, #474747 , #272727);
 	box-sizing: border-box;
 }
 
+@mixin bkg-img-mixin($b-size){
+    position: relative;
+	
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     $b-size;
+    padding: 0;
+    margin: 10px;
+}
+
+@mixin bkg-catalogue-img($w-size, $h-size,$b-size){
+    position: relative;
+	width: $w-size;
+    height: $h-size;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     $b-size;
+    padding: 1%;
+    margin: 0 auto;
+}
+.logo{
+	width: 10px;
+}
+
+.pro-box{
+	@include bkg-img-mixin(cover);
+	box-shadow: 0px 0px 2px #c8c8c885;
+}
+
+
+
+
+
+
+
 .header{
 	
 	.header-row{
@@ -45,7 +80,7 @@ $black-gradient-right: linear-gradient(to right, #474747 , #272727);
 }
 
 .bkg-1{
-	background-image: url(<%= asset_path 'Ortuzar2.jpg' %>);
+	background-image: url(<%= asset_path 'index-cat1.png' %>);
 }
 div{
 	overflow: hidden;
@@ -109,7 +144,26 @@ div{
 }
 
 .product-carousel{
-	border: 1px solid #c8c8c8;
+	
+	.carousel-pro, .slick-list, .slick-track{
+		height: 100% !important;
+		.caption-product{
+			background-color: #ffffffb5;
+		    width: 100%;
+		    padding: 5%;
+		    height: 6rem;
+		    text-align: center;
+		    transition: all .8s;
+		    
+		    h5{
+		    	font-size: .8rem !important;
+		    }
+		}
+		.caption-product:hover{
+			height: 7rem;
+		}
+	
+	}
 
 }
 
@@ -258,14 +312,14 @@ body{
 
 figcaption{
 	position: absolute;
-   bottom: 10px;
-   left: 0;
-
+   	bottom: 10px;
+   	left: 0;
+	right: 0;
   	padding: 10px;
-   color: white !important;
-   font-size: 40px !important;
-   font-weight: bolder !important;
-  background-color: rgba(33, 33, 33, 0.8);
+   	color: #8e8585 !important;
+   	font-size: 40px !important;
+   	font-weight: bolder !important;
+  	
   ul{
   	li{
   		display: inline-block;
@@ -282,8 +336,7 @@ figcaption{
 
 .lumi-link{
 	display: inline-block !important;
-    
-    text-align: right !important;
+    text-align: center !important;
     
 }
 // css footer
@@ -393,11 +446,25 @@ footer{
   color: black;
 }
 
-
+.card{
+	border-radius: 0px !important;
+	bottom: 0px;
+	transition: all .6s;
+	.card-img-box{
+		@include bkg-catalogue-img(100%, 15rem,cover);
+	}
+	.card-body{
+		.btn{
+			border-radius: 0 !important;
+		}
+	}
+}
 
 
 .card:hover{
-	box-shadow: 0px 1px 1px #c8c8c8;
+	box-shadow: 0px 0px 6px #c8c8c885;
+	position: relative;
+	bottom: 3px;
 }
 
 .cat-menu{
