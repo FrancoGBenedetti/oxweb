@@ -67,7 +67,7 @@
     <div class="col-md-3 no-pad parent-link">
       <div class="image-wrapper bkg-full-pro bkg-1 link-to-projects ">
 
-              <%= image_tag 'H1.jpg', class: 'link-img img-fluid   align-middle ghost ' %>
+              <%= image_tag 'index-cat1.png', class: 'link-img img-fluid   align-middle ghost ' %>
               <h3 class="">
                 Catalogo
                 <a class="" href="<%= pages_catalogue_path %>">
@@ -78,7 +78,7 @@
           </div>
     </div>
 
-    <div class="col-md-9 ">
+    <div class="col-md-9 p-0">
       <div class="carousel-pro d-flex align-items-stretch h-100">
         <% @products.each do |product| %>
           <div class="pro-box d-flex align-items-end" style="background-image:url('<%= product.photos.first.image %>'); height: 100% !important; ">
@@ -127,16 +127,19 @@
 </div>
 
 <script>
+  
   $('.carousel-pro').slick({
       
       slidesToShow: 3,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 3000
+
+
     
     })
   $( "div.slick-slide > div" ).css( "height", "100%" );
-  $( "div.slick-slide > div" ).css( "margin-right", "1rem" );
+  
 
 </script>
 
