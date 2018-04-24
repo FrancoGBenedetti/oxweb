@@ -1,4 +1,4 @@
-<!--<div id="carouselExampleIndicators" class="carousel slide mr-top mr-bottom elegant" data-ride="carousel">
+<div id="carouselExampleIndicators" class="container carousel slide p-0" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -6,29 +6,47 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <%= image_tag 'Ortuzar1.jpg', class: 'd-block w-100' %>
+      <%= image_tag 'slide10.jpg', class: 'd-block w-100' %>
       <div class="carousel-caption d-none d-md-block">
 
         <div class="container">
           <div class="row">
             
-            <div class="offset-md-4 col-md-4 caption-box ">
+            <div class="offset-md-4 col-md-4 text-center ">
                 <figure class="figure">
-                  <%= image_tag 'iso.png', class: 'logo-caption' %>
+                  <%= image_tag 'iso.png', class: '' %>
                 </figure>
-                <p>
-                   Importación y comercialización de accesorios de acero
-                  inoxidable que se incorporan en baños, cocinas y otros espacios de una vivienda
+                <p class="text-center">
+                   Acero inoxidable, aluminio, comodidad en el hogar, seguridad vial
+                </p>
+               
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <%= image_tag 'slide11.jpg', class: 'd-block w-100' %>
+      <div class="carousel-caption d-none d-md-block">
+
+        <div class="container">
+          <div class="row">
+            
+            <div class="offset-md-4 col-md-4 text-center ">
+                <figure class="figure">
+                  <%= image_tag 'Logo-02.png', class: '' %>
+                </figure>
+                <p class="text-center">
+                   Una empresa del Grupo: 
                 </p>
                 <figure class="figure">
-                  <%= image_tag 'Logo-02.png', class: 'logo' %>
+                  <%= image_tag 'lumi.png', class: '' %>
                 </figure>
             </div>
           </div>
         </div>
-
-
-    </div>
+      </div>
     </div>
 
   </div>
@@ -40,20 +58,19 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-</div>-->
-
-
-
-
+</div>
 
 <div class="container test-flex">
-  <div class="row mt-3 product-carousel ">
+  
+
+
+  <div class="row mt-2 product-carousel ">
     <div class="col-md-3 no-pad parent-link mt-2">
       <div class="image-wrapper bkg-full-pro bkg-1 link-to-projects ">
 
               <%= image_tag 'index-cat1.png', class: 'link-img img-fluid   align-middle ghost ' %>
               <h3 class="">
-                Catalogo
+                Catálogo
                 <a class="" href="<%= pages_catalogue_path %>">
                  <button class="btn btn-outline-success">Ver Más</button>
                 </a>
@@ -62,7 +79,9 @@
           </div>
     </div>
 
-    <div class="col-md-9 p-0">
+   
+
+    <div class="col-md-9 p-0 carousel-pro-box">
       <div class="carousel-pro d-flex align-items-stretch h-100">
         <% @products.each do |product| %>
           <div class="pro-box d-flex align-items-end" style="background-image:url('<%= product.photos.first.image %>'); height: 100% !important; ">
@@ -116,8 +135,13 @@
       
       slidesToShow: 3,
       slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 3000
+      arrows: false,
+      
+      focusOnSelect: true,
+      pauseOnHover: true,
+
+      //autoplay: true,
+      //autoplaySpeed: 3000
 
 
     
@@ -129,4 +153,4 @@
 
 
 
-<%= render 'shared/lumi' %>
+

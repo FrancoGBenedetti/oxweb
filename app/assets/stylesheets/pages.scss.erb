@@ -4,10 +4,27 @@
 
 $black-gradient-right: linear-gradient(to right, #474747 , #272727);
 *{
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	box-sizing: border-box;
 }
+h6{
+	font-size: 0.8rem !important;
+}
+@mixin title($color, $align){
+	font-size: 2rem;
+	color: $color;
+	text-align: $align;
+}
+@mixin border-top-bot($color){
+	border-top: 1px solid $color;
+	border-bottom: 1px solid $color;
+}
 
+
+.title-catalogo{
+	@include title(white, center);
+	@include border-top-bot(#c8c8c8);
+}
 @mixin bkg-img-mixin($b-size){
     position: relative;
 	
@@ -77,7 +94,7 @@ $black-gradient-right: linear-gradient(to right, #474747 , #272727);
 }
 
 .bkg-1{
-	background-image: url(<%= asset_path 'index-cat1.png' %>);
+	background-image: url(<%= asset_path 'accesorios.jpg' %>);
 }
 div{
 	overflow: hidden;
@@ -239,6 +256,9 @@ body{
 			text-align: center;
 		}
 	}
+	img{
+		width:5rem;
+	}
 }
 
 .bkg-img{
@@ -280,9 +300,7 @@ body{
 	}
 
 }
-.product-carousel{
-	height:30% !important;
-}
+
 
 .image-wrapper-mh3{
 	position: relative;
@@ -352,12 +370,13 @@ figcaption{
 
 .colum-a{
 	font-size: .8rem;
+	padding: 2%;
 }
 
 .colum-b{
 	text-align: center;
 	img{
-		width: 20rem;
+		width: 12rem;
 	}
 }
 footer{
@@ -370,6 +389,10 @@ footer{
 }
 footer a{
   color: #474747;
+
+  a{
+  	color: white !important;
+  }
 }
 footer a:hover{
   color: #565656;
@@ -383,18 +406,18 @@ footer a:hover{
   background: #c8c8c8;
 }
 .footer-middle{
-   background: linear-gradient(white, #d8d8d8);
-  padding-top: 2em;
-  padding-bottom: 2em;
-  color: #474747;
+   background: #464646b0;
+	padding: 2em 3em;
+  color: white;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
+}
+.footer-pad{
+	width: 100% !important;
 }
 .logos-footer{
 	text-align: right;
 
-	.footer-pad{
-		width: 100%;
-	}
+	
 	ul{
 		list-style: none !important;
 	}
@@ -405,14 +428,11 @@ footer a:hover{
 	border-right: 1px solid #e8e8e8;
 }
 
-.footer-logo{
-	width: 300px !important;
-}
+
 
 footer{
 	background-color: #272727;
-	padding-top: 20px;
-	padding-bottom: 20px;
+
 }
 
 ///end footer///
