@@ -1,9 +1,7 @@
-<div class="container-fluid product-show mt-3 elegant">
+<div class="container product-show mt-3 elegant">
 
-	<div class="row product-show ">
-		<div class="col-md-12 pt-5 text-right">
-			<h5 class="product-title-show"><%= @product.tipo %></h5>
-		</div>
+	<div class="row product-show  mt-3 mb-3">
+		
 
 	  <div class="col-md-5 ">
 	    <div class="sp-loading"><%= image_tag 'sp-loading.gif' %><br>Cargando imagenes</div>
@@ -14,10 +12,17 @@
 	    </div>
 	  </div>
 
-	  <div class="col-md-7 mt-3 mb-3">
+	  <div class="col-md-7 ">
 
 	  	<ul class="list-group">
-
+			<li class="list-group-item">
+			  	<h5>Tipo:</h5>
+			  	<p class='product-title-show'>
+			  		<%= @product.tipo %>
+			  	</p>
+			  		
+			  	
+			  	</li>
 		  <li class="list-group-item">
 		  	<h5>Descripcion</h5>
 		  	<%= @product.descripcion %></li>
