@@ -10,6 +10,9 @@ $black-gradient-right: linear-gradient(to right, #474747 , #272727);
 h6{
 	font-size: 0.8rem !important;
 }
+.btn{
+	border-radius: 0 !important;
+}
 @mixin title($color, $align){
 	font-size: 2rem;
 	color: $color;
@@ -52,7 +55,18 @@ h6{
 }
 
 
-
+.button-download-pdf{
+	padding: 10px;
+	background-color: #d21b1b;
+	color: white;
+	transition: all .8s;
+	display: inline-block;
+	margin-top: 10px;
+}
+.button-download-pdf:hover{
+	padding: 12px;
+	background-color: #ff4848;
+}
 
 
 
@@ -94,7 +108,7 @@ h6{
 }
 
 .bkg-1{
-	background-image: url(<%= asset_path 'accesorios.jpg' %>);
+	background-image: url(<%= asset_path 'catalogo.jpg' %>);
 }
 div{
 	overflow: hidden;
@@ -203,7 +217,7 @@ nav{
 }
 
 body{
-	margin: 10px;
+	
 
 	background: linear-gradient(to left, #474747 , #272727);
 }
@@ -368,9 +382,22 @@ figcaption{
 }
 // css footer
 
+
+footer{
+  color: white;
+  font-size: .8rem;
+  h3{
+  	font-size: 1rem;
+  	color: #c8c8c8;
+  	
+
+
+  }
 .colum-a{
-	font-size: .8rem;
+	
 	padding: 2%;
+	border-right: 1px solid #272727;
+	text-align: left;
 }
 
 .colum-b{
@@ -379,12 +406,12 @@ figcaption{
 		width: 12rem;
 	}
 }
-footer{
-  color: white;
-  h2{
-  	font-weight: bolder;
-
+.colum-c{
+  	text-align: right;
+  	border-left: 1px solid #272727;
   }
+  
+  
 
 }
 footer a{
@@ -416,10 +443,11 @@ footer a:hover{
 }
 .logos-footer{
 	text-align: right;
-
+list-style: none !important;
 	
-	ul{
-		list-style: none !important;
+	li{
+		display: inline-block;
+
 	}
 }
 
