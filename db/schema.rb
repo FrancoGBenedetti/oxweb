@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20180613162929) do
     t.string "precio_usa"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "price"
+    t.string "price"
   end
 
   create_table "users", force: :cascade do |t|
