@@ -32,16 +32,22 @@
 		  <li class="list-group-item">
 		  	<h5>Material</h5>
 		  	<%= @product.material %></li>
-		  	 <li class="list-group-item">
+		  	<li class="list-group-item">
+		  	<h5>Cod</h5>
+		  	<%= @product.cod %></li>
+		  	 <li id="precio" class="list-group-item text-right precio">
 			  	<h5>Precio</h5>
 			  	<%= @product.price %>
 			 </li>
-		  <li class="list-group-item">
-		  	<h5>Cod</h5>
-		  	<%= @product.cod %></li>
+		  
 		  	<li class="list-group-item text-right">
+		  		<a href="">
+		  			<button class="btn btn-primary  btn-success">
+		  				Descargar Ficha
+		  			</button>
+		  		</a>
 		  		<a class="" href="<%= pages_catalogue_path %>">
-					<button class="btn btn-primary btn-lg btn-success">
+					<button class="btn btn-primary  btn-success">
 						Catalogo
 					</button>
 				</a>
