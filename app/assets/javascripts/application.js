@@ -14,5 +14,3 @@
 //= require smoothproducts
 //= require jquery.slick
 //= require turbolinks
-//= require_tree .
-
