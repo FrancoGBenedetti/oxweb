@@ -1,7 +1,7 @@
 <div class="container product-show mt-3 elegant">
 
 	<div class="row product-show  mt-3 mb-3">
-		
+
 
 	  <div class="col-md-5 ">
 	    <div class="sp-loading"><%= image_tag 'sp-loading.gif' %><br>Cargando imagenes</div>
@@ -20,8 +20,8 @@
 			  	<p class='product-title-show'>
 			  		<%= @product.tipo %>
 			  	</p>
-			  		
-			  	
+
+
 			  	</li>
 		  <li class="list-group-item">
 		  	<h5>Descripcion</h5>
@@ -39,14 +39,14 @@
 			  	<h5>Precio</h5>
 			  	<%= @product.price %>
 			 </li>
-			 
-		  
+
+
 		  	<li class="list-group-item text-right">
-		  		<a href="">
+		  		<%= link_to download_ficha_product_path(@product) do %>
 		  			<button class="btn btn-primary  btn-success">
 		  				Descargar Ficha
 		  			</button>
-		  		</a>
+		  		<% end %>
 		  		<a class="" href="<%= pages_catalogue_path %>">
 					<button class="btn btn-primary  btn-success">
 						Catalogo

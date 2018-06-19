@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: :show
+  before_action :set_product, only: [:show, :edit, :update, :destroy, :download_ficha]
+  before_action :authenticate_user!, except: [:show, :download_ficha]
   layout 'admin', except: [:index, :show]
   # GET /products
   # GET /products.json
@@ -65,6 +65,14 @@ class ProductsController < ApplicationController
   def import
     Product.import(params[:file])
     redirect_to root_path
+  end
+
+  def download_ficha
+    image = @product.ficha
+    if image.try(:file).exists?
+      data = open(image.url)
+      send_data data.read, type: data.content_type, x_sendfile: true
+    end
   end
 
   private

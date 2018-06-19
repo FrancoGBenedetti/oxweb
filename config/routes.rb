@@ -16,6 +16,9 @@ Rails.application.routes.draw do
     resources :orders, only: :create
     collection { post :import }
     resources :photos, only: [:create, :destroy]
+    member do
+      get 'download_ficha'
+    end
   end
 
   resources :orders, only: [:index]
