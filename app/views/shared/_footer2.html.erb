@@ -24,13 +24,15 @@
                 <a href="<%= pages_catalogue_path %>">
                   <li>Catalogo</li>
                 </a>
-                
-                
-                
+
+
+
                 <li>
-                  <div class="button-download-pdf">
-                    Catalogo<i class="ml-1 fas fa-chevron-down"></i>
-                  </div>
+                  <a href="<%= @catalogo.url.url %>" target="_blank">
+                    <div class="button-download-pdf">
+                      Catalogo<i class="ml-1 fas fa-chevron-down"></i>
+                    </div>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -43,13 +45,13 @@
               <a class="navbar-brand" href="<%= root_path %>">
                 <%= image_tag 'logo.png', class: '' %>
               </a>
-                
+
             </div>
           </div>
 
 
-          
-          
+
+
           <div class="col-md-4 d-flex align-items-center p-2 colum-c">
             <!--Column1-->
             <div class="footer-pad">
@@ -60,10 +62,10 @@
                 <li class="">+56 9 9369 0093</li>
                 <br>
                 <li><h6>CORREO <i class="far fa-envelope-open ml-2"></i></h6></li>
-               
+
                 <li class="">contacto@ox.cl</li>
               </ul>
-              
+
             </div>
           </div>
 
@@ -82,7 +84,7 @@
           <div class="col-xs-12 col-md-6">
              <ul class="logos-footer">
                 <li>
-                  
+
                     <figure class="figure">
                       <%= image_tag 'Logo-02.png', class: 'figure-img img-fluid ', width:'80rem' %>
                     </figure>
@@ -92,7 +94,7 @@
                     <figure class="figure ">
 
                         <%= image_tag 'lumi-f.png', class: 'figure-img img-fluid ', width:'80rem' %>
-                     
+
                     </figure>
                   </a>
                 </li>

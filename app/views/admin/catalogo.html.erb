@@ -1,0 +1,7 @@
+<h1>Actualiza el catalogo</h1>
+
+<%= form_with model: @catalogo, local: true do |f| %>
+  <%= f.file_field :url %>
+
+  <%= f.submit 'enviar' %>
+<% end %>

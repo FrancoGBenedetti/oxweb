@@ -23,6 +23,12 @@ Rails.application.routes.draw do
 
   resources :orders, only: [:index]
 
+  resources :catalogos, only: [:create, :update] do
+    collection do
+      get 'download_catalogo'
+    end
+  end
+  
   get 'pages/index'
 
   get 'pages/catalogue'
@@ -32,6 +38,8 @@ Rails.application.routes.draw do
   get 'pages/contact'
 
   get 'admin/dashboard'
+
+  get 'admin/catalogo'
 
   get 'pages/mh3'
 
