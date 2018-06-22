@@ -28,11 +28,19 @@
 
 
                 <li>
-                  <a href="<%= @catalogo.url.url if %>" target="_blank">
+                  <% if @catalogo %>
+                  <a href="<%= @catalogo.url.url %>" target="_blank">
                     <div class="button-download-pdf">
                       Catalogo<i class="ml-1 fas fa-chevron-down"></i>
                     </div>
                   </a>
+                  <% else %>
+                  <a href="#">
+                    <div class="button-download-pdf">
+                      Catalogo<i class="ml-1 fas fa-chevron-down"></i>
+                    </div>
+                  </a>
+                  <% end %>
                 </li>
               </ul>
             </div>

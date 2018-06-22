@@ -26,6 +26,6 @@ class PagesController < ApplicationController
     end
 
     def set_catalogo
-      @catalogo = Catalogo.last
+      @catalogo = Catalogo.last if Catalogo.last
     end
 end
