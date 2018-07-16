@@ -1,3 +1,9 @@
+<% if current_user.present? %>
+      <%= render 'shared/adminnavbar' %>
+    <% else %>
+      <%= render 'shared/navbar' %>
+    <% end %>
+
 <div class="container about-container mt-3">
 	<div class="row elegant">
 		<div class="offset-md-1 col-md-7 about-info mt-3">

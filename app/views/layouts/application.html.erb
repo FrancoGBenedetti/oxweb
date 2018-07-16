@@ -19,11 +19,7 @@
   </head>
     <body data-turbolinks="false">
 
-    <% if current_user.present? %>
-      <%= render 'shared/adminnavbar' %>
-    <% else %>
-      <%= render 'shared/navbar' %>
-    <% end %>
+    
 
 
     <%= yield %>
