@@ -5,9 +5,9 @@ class OrdersController < ApplicationController
 
   def index
     if current_user.present?
-      @orders = Order.where(user_id: current_user.id, payed: false).order(:cod)
+      @orders = Order.where(user_id: current_user.id, payed: false).order(:id)
     else
-      @orders = Order.where(session: session.id, payed: false).order(:cod)
+      @orders = Order.where(session: session.id, payed: false).order(:id)
     end
 
   end
