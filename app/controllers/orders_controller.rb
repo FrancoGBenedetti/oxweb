@@ -39,7 +39,9 @@ class OrdersController < ApplicationController
   private
     def set_num
       if current_user.present?
-        @num = Order.where(user_id: current_user.id, payed:   false).inject(0) { |sum, order| sum += order.quantity }
+        @total = Order.where(user_id: current_user.id, payed: false).inject(0) { |sum, order| sum += (order.quantity.to_i * order.product.price.to_i) }
+      else
+        @total = Order.where(session: session.id, payed: false).inject(0) { |sum, order| sum += order.quantity.to_i * order.product.price.to_i }
       end
     end
 end
