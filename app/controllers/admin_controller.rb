@@ -16,7 +16,7 @@ class AdminController < ApplicationController
 
   private
 
-    def check_user
+    def check_admin
       if !current_user.admin?
         redirect_to root_path
       end
