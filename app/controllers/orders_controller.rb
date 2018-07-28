@@ -7,7 +7,7 @@ class OrdersController < ApplicationController
     if current_user.present?
       @orders = Order.where(user_id: current_user.id, payed: false).order(:cod)
     else
-      @orders = Order.where(session: session.id, payed: false)
+      @orders = Order.where(session: session.id, payed: false).order(:cod)
     end
 
   end
