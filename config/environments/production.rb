@@ -94,7 +94,7 @@ Rails.application.configure do
     :address        => ENV['MAILGUN_SMTP_SERVER'],
     :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
     :password       => ENV['MAILGUN_SMTP_PASSWORD'],
-    :domain         => 'www.oxchile.com',
+    :domain         => 'mg.oxchile.com',
     :authentication => :plain,
   }
   ActionMailer::Base.delivery_method = :smtp
