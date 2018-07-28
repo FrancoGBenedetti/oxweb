@@ -8,14 +8,27 @@ Rails.application.routes.draw do
 
   get 'orders/quote'
 
-  devise_for :users
+
+
+  devise_for :users, controllers: {
+    registrations: 'user/registrations',
+    sessions: 'user/sessions'
+  }
 
 
 
   resources :products do
-    resources :orders, only: :create
+
+    resources :orders, only: :create do
+      collection do
+        post 'session_quote'
+      end
+    end
+
     collection { post :import }
+
     resources :photos, only: [:create, :destroy]
+
     member do
       get 'download_ficha'
     end
@@ -28,7 +41,7 @@ Rails.application.routes.draw do
       get 'download_catalogo'
     end
   end
-  
+
   get 'pages/index'
 
   get 'pages/catalogue'

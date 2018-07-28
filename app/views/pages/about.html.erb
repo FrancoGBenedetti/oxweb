@@ -1,8 +1,6 @@
-<% if current_user.present? %>
-      <%= render 'shared/adminnavbar' %>
-    <% else %>
-      <%= render 'shared/navbar' %>
-    <% end %>
+
+<%= render 'shared/navbar' %>
+
 
 <div class="container about-container mt-3">
 	<div class="row elegant">
@@ -41,17 +39,15 @@
 				<figure class="figure ">
 				<%= image_tag 'asech-logo.png', class: 'figure-img img-fluid ' %>
 				</figure>
-				
-				
+
+
 			</a>
 		</div>
 		<div class="col-md-4 mt-3 middle-align ">
 			<figure class="figure ">
 				<%= image_tag 'logo.png', class: 'figure-img img-fluid ' %>
 			</figure>
-			
+
 		</div>
 	</div>
 </div>
-
-

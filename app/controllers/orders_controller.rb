@@ -1,16 +1,29 @@
 class OrdersController < ApplicationController
-  before_action :authenticate_user!
+
   before_action :set_num, except: :destroy
 
+
   def index
-    @orders = Order.where(payed: false)
+    if current_user.present?
+      @orders = Order.where(user_id: current_user.id, payed: false)
+    else
+      @orders = Order.where(session: session.id, payed: false)
+    end
+
   end
 
   def create
+    session[:orders] ||= []
     @product = Product.find(params[:product_id])
-    @order = Order.find_or_create_by(user_id: current_user.id, product_id: @product.id, payed: false)
-    @order.quantity += 1
-    @order.save
+    if current_user.present?
+      @order = Order.find_or_create_by(user_id: current_user.id, product_id: @product.id, payed: false)
+      @order.quantity += 1
+      @order.save
+    else
+      @order = Order.find_or_create_by(session: session.id, product_id: @product.id, payed: false)
+      @order.quantity += 1
+      @order.save
+    end
   end
 
   def destroy
@@ -20,6 +33,8 @@ class OrdersController < ApplicationController
     UserMailer.quotation(current_user).deliver_now
     redirect_to root_path, notice: 'tu cotización se envío te responderemos a la brevedad'
   end
+
+
 
   private
     def set_num

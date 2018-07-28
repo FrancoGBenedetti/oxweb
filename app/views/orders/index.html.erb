@@ -1,34 +1,41 @@
+<%= render 'shared/navbar' %>
 
-<% if @orders.size == 0 %>
-  <h4>No tienes productos para cotizar</h4>
-  <h5>vuelve al catalogo para agregar <%= link_to 'catalogo', pages_catalogue_path %></h5>
-<% else %>
-<div class="container text-light mt-5">
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th>Nombre</th>
-        <th>Cantidad</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @orders.each do |order| %>
+<div class="container text-white">
+  <% if @orders.size == 0 %>
+    <h4>No tienes productos para cotizar</h4>
+    <h5>vuelve al catalogo para agregar <%= link_to 'catalogo', pages_catalogue_path %></h5>
+  <% else %>
+  <div class="container text-light mt-5">
+    <table class="table table-hover">
+      <thead>
         <tr>
-          <td><%= order.product.tipo %></td>
-          <td><%= order.quantity %></td>
+          <th>Nombre</th>
+          <th>Cantidad</th>
+          <th></th>
         </tr>
-      <% end %>
-      <tr>
-        <td></td>
-        <td>Total: <%= @num %></td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="row">
-    <div class="col-sm-3 offset-sm-9">
-      <%= link_to 'Cotizar', orders_quote_path, class: 'btn btn-secondary mb-5' %>
+      </thead>
+      <tbody>
+        <% @orders.each do |order| %>
+          <tr>
+            <td><%= order.product.tipo %></td>
+            <td><%= order.quantity %></td>
+          </tr>
+        <% end %>
+        <tr>
+          <td></td>
+          <td>Total: <%= @num %></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="row">
+      <div class="col-sm-3 offset-sm-9">
+        <% if current_user.present? %>
+        <%= link_to 'Cotizar', orders_quote_path, class: 'btn btn-secondary mb-5' %>
+        <% else %>
+        <%= link_to 'Registrate para cotizar', new_user_registration_path, class: 'btn btn-secondary mb-5' %>
+        <% end %>
+      </div>
     </div>
   </div>
+  <% end %>
 </div>
-<% end %>

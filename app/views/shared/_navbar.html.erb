@@ -12,13 +12,6 @@
 
 
 <nav class="container navbar navbar-expand-lg navbar-dark ">
-
-  
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -35,21 +28,23 @@
                   <li class="nav-item">
                     <a class="nav-link" href="<%= pages_catalogue_path %>">Catalogo</a>
                   </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
                   <li class="nav-item">
-                    <% if current_user.present? %>
-                      <a class="btn btn-secondary text-light">
-                        Productos <span class="badge badge-light" id="product-num">0</span>
-                      </a>
-                    <% end %>
+                    <a href="<%= orders_path %>" class="nav-link btn btn-secondary mr-2">Cotizaciones</a>
                   </li>
+                  <% if current_user.present? %>
+                    <%= link_to 'Cerrar Sesión', destroy_user_session_path, class:'btn btn-secondary',method: :delete %>
+                  <% else %>
+                  <li class="nav-item">
+                    <a href="<%= new_user_registration_path %>" class="nav-link btn btn-secondary">Registrate</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<%= new_user_session_path %>" class="nav-link btn btn-secondary ml-2">Iniciar Sesión</a>
+                  </li>
+                  <% end %>
                 </ul>
 
             </div>
-
-      </div>
-    </div>
-  </div>
-  
-
 
 </nav>

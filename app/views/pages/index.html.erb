@@ -1,8 +1,6 @@
-<% if current_user.present? %>
-      <%= render 'shared/adminnavbar' %>
-    <% else %>
-      <%= render 'shared/navbar' %>
-    <% end %>
+
+    <%= render 'shared/navbar' %>
+
 
 <div id="carouselExampleIndicators" class="container carousel slide p-0" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -17,7 +15,7 @@
 
         <div class="container">
           <div class="row">
-            
+
             <div class="offset-md-4 col-md-4 text-center ">
                 <figure class="figure">
                   <%= image_tag 'iso.png', class: '' %>
@@ -25,14 +23,14 @@
                 <p class="text-center">
                    Acero inoxidable, aluminio, comodidad en el hogar, seguridad vial
                 </p>
-               
+
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    
+
 
     <div class="carousel-item">
       <%= image_tag 'slide12.png', class: 'd-block w-100' %>
@@ -40,7 +38,7 @@
 
         <div class="container">
           <div class="row">
-            
+
             <div class="offset-md-4 col-md-4 text-center ">
                 <figure class="figure">
                   <%= image_tag 'Logo-02.png', class: '' %>
@@ -50,7 +48,7 @@
                 </p>
                 <figure class="figure">
                   <a href="http://lumichile.com/"><%= image_tag 'lumi.png', class: '' %></a>
-                  
+
                   <%= image_tag 'logosmall.png', class: '' %>
                 </figure>
             </div>
@@ -64,9 +62,9 @@
 
         <div class="container">
           <div class="row">
-            
+
             <div class="offset-md-4 col-md-4 text-center ">
-                
+
                 <p class="text-center">
                    Iluminación para construcción y paisajismo.
                 </p>
@@ -91,7 +89,7 @@
 </div>
 
 <div class="container test-flex">
-  
+
 
 
   <div class="row mt-2 product-carousel ">
@@ -109,7 +107,7 @@
           </div>
     </div>
 
-   
+
 
     <div class="col-md-9 p-0 carousel-pro-box">
       <div class="carousel-pro d-flex align-items-stretch h-100">
@@ -119,7 +117,7 @@
               <h5><%= product.tipo %></h5>
               <%= link_to 'ver', product_path(product), class: 'btn btn-secondary text-white' %>
             </div>
-            
+
           </div>
         <% end %>
       </div>
@@ -160,27 +158,23 @@
 </div>
 
 <script>
-  
+
   $('.carousel-pro').slick({
-      
+
       slidesToShow: 3,
       slidesToScroll: 1,
       arrows: false,
-      
-      
+
+
       pauseOnHover: true,
 
       autoplay: true,
       autoplaySpeed: 3000
 
 
-    
+
     })
   $( "div.slick-slide > div" ).css( "height", "100%" );
-  
+
 
 </script>
-
-
-
-

@@ -1,8 +1,4 @@
-<% if current_user.present? %>
-      <%= render 'shared/adminnavbar' %>
-    <% else %>
-      <%= render 'shared/navbar' %>
-    <% end %>
+<%= render 'shared/navbar' %>
 <div class="mr-top">
 
 
@@ -45,7 +41,7 @@
               <div class="p-1 d-flex aligns-item-strech">
                 <div class="card mr-top align-top" style="width: 19rem;">
                   <div class="card-img-box" style="background-image:url('<%= product.photos.first.image %>')">
-              
+
                   </div>
                   <!--<%= image_tag product.photos.first.image, class: 'card-img-top' %>-->
                   <div class="card-body d-flex align-items-end">
@@ -56,9 +52,9 @@
                         <%= link_to 'ver', product_path(product), class: 'btn btn-secondary text-white' %>
                         <%= link_to '+', product_orders_path(product.id), data: { remote: true, method: :post }, class: 'btn btn-success text-white' %>
                       </div>
-                     
+
                     </div>
-                    
+
                   </div>
                 </div>
               </div>
@@ -73,5 +69,3 @@
   </div>
 
 </div>
-
-
