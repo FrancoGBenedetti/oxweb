@@ -34,7 +34,11 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :orders, only: [:index]
+  resources :orders, only: [:index, :destroy] do
+    member do
+      post 'update_quiantity'
+    end
+  end
 
   resources :catalogos, only: [:create, :update] do
     collection do

@@ -22,9 +22,15 @@
           <tr>
             <td><%= order.product.cod %></td>
             <td><%= order.product.tipo %></td>
-            <td><%= order.quantity %></td>
+            <td>
+              <%= form_tag update_quiantity_order_path(order.id) do %>
+                <%= number_field_tag :quantity, order.quantity.to_i %>
+                <!-- <input type="number" name="quantity" value="<%#= order.quantity %>"> -->
+              <% end %>
+            </td>
             <td><%= order.product.price %></td>
             <td><%= order.product.price.to_i * order.quantity.to_i %></td>
+            <td><%= link_to 'Borrar', order_path(order), method: :delete, class: 'btn btn-danger' %></td>
           </tr>
         <% end %>
         <tr>
