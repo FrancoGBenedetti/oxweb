@@ -13,11 +13,6 @@
       </li>
       <% if current_user.present? %>
         <li class="nav-item">
-          <a href="<%= orders_path %>" class="btn btn-secondary text-light">
-            Productos <span class="badge badge-light" id="product-num"><%= @num %></span>
-          </a>
-        </li>
-        <li class="nav-item">
           <%= link_to 'cerrar sesión', destroy_user_session_path, method: :delete, class:'nav-link' %>
         </li>
         <li class="nav-item">
