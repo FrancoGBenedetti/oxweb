@@ -31,16 +31,16 @@
                 </ul>
                 <ul class="navbar-nav ml-auto">
                   <li class="nav-item">
-                    <a href="<%= orders_path %>" class="nav-link btn btn-secondary mr-2">Cotizaciones</a>
+                    <a href="<%= orders_path %>" class="nav-link  mr-2">Cotizaciones</a>
                   </li>
                   <% if current_user.present? %>
                     <%= link_to 'Cerrar Sesión', destroy_user_session_path, class:'btn btn-secondary',method: :delete %>
                   <% else %>
                   <li class="nav-item">
-                    <a href="<%= new_user_registration_path %>" class="nav-link btn btn-secondary">Registrate</a>
+                    <a href="<%= new_user_registration_path %>" class="nav-link ">Registrate</a>
                   </li>
                   <li class="nav-item">
-                    <a href="<%= new_user_session_path %>" class="nav-link btn btn-secondary ml-2">Iniciar Sesión</a>
+                    <a href="<%= new_user_session_path %>" class="nav-link btn btn-outline-secondary ml-2">Iniciar Sesión</a>
                   </li>
                   <% end %>
                 </ul>
