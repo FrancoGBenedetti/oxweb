@@ -28,8 +28,8 @@
                 <!-- <input type="number" name="quantity" value="<%#= order.quantity %>"> -->
               <% end %>
             </td>
-            <td><%= order.product.price %></td>
-            <td><%= order.product.price.to_i * order.quantity.to_i %></td>
+            <td>$<%= number_to_currency order.product.price, unit: "", separator: ".", precision: 0 %></td>
+            <td>$<%= number_to_currency order.product.price.to_i * order.quantity.to_i, unit: "", separator: ".", precision: 0 %></td>
             <td><%= link_to 'Borrar', order_path(order), method: :delete, class: 'btn btn-danger' %></td>
           </tr>
         <% end %>
@@ -38,7 +38,7 @@
           <td></td>
           <td></td>
           <td></td>
-          <td>Total: <%= @total %></td>
+          <td>Total: $<%= number_to_currency @total, unit: "", separator: ".", precision: 0 %></td>
         </tr>
       </tbody>
     </table>

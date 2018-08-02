@@ -33,6 +33,9 @@
 
 
     <script async type="text/javascript">
+      const numberWithCommas = (x) => {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+      }
     	/* wait for images to load */
       <% if notice.present? %>
         new Noty({
@@ -40,7 +43,7 @@
           text: '<%= notice %>',
           timeout: 1000
         }).show();
-      <% elsif alert.present?%>
+      <% elsif alert.present? %>
         new Noty({
           type: 'alert',
           text: '<%= alert %>',
@@ -49,6 +52,7 @@
       <% end %>
 
       $( document ).on('turbolinks:load', function() {
+        
 
         $(window).load(function() {
       		$('.sp-wrap').smoothproducts();
