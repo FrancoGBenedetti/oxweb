@@ -34,7 +34,7 @@ class User::SessionsController < Devise::SessionsController
       if user.admin?
         admin_dashboard_path
       else
-        root_path
+         orders_index_path
       end
     end
 end
