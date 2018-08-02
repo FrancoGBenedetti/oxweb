@@ -41,6 +41,8 @@ class OrdersController < ApplicationController
 
   def quote
     UserMailer.quotation(current_user).deliver_now
+    @orders = Order.where(user_id: current_user.id, payed: false)
+    @orders.update_all(payed: true)
     redirect_to root_path, notice: 'tu cotización se envío te responderemos a la brevedad'
   end
 

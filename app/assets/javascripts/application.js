@@ -11,6 +11,7 @@
 // about supported directives.
 
 //= require rails-ujs
+//= require noty
 //= require smoothproducts
 //= require jquery.slick
 //= require turbolinks
