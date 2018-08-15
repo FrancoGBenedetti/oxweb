@@ -12,6 +12,6 @@ class UserMailer < ApplicationMailer
     @phone = phone
     @company = company
     @name = name
-    mail(subject: 'conacto', from: @mail)
+    mail(subject: 'contacto', from: @mail)
   end
 end
