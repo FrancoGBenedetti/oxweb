@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-  default to: 'contacto@oxchile.com'
+  default to: 'galaz.becerra@gmail.com'
   def quotation(user)
     @user = user
     @orders = Order.where(user_id: user.id, payed: false)
