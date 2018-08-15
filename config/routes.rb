@@ -54,6 +54,8 @@ Rails.application.routes.draw do
 
   get 'pages/contact'
 
+  post 'pages/message'
+
   get 'admin/dashboard'
 
   get 'admin/catalogo'

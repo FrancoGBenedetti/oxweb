@@ -18,6 +18,16 @@ class PagesController < ApplicationController
   def mh3
   end
 
+  def message
+    @message = params[:message]
+    @mail = params[:mail]
+    @phone = params[:phone]
+    @company = params[:company]
+    @name = params[:name]
+    UserMailer.contact(@message, @mail, @phone, @company, @nombre).deliver_now
+    redirect_to root_path, notice: 'mensaje enviado, nos contactaremos con usted a la brevedad'
+  end
+
   private
     def set_num
       if current_user.present?
