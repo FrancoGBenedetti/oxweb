@@ -42,8 +42,3 @@
 
 
 <%= link_to 'New Product', new_product_path %>
-
-<%= form_tag import_products_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag :import %>
-<% end %>

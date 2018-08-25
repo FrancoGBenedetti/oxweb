@@ -14,6 +14,9 @@ class AdminController < ApplicationController
     end
   end
 
+  def import
+  end
+  
   private
 
     def check_admin

@@ -60,6 +60,8 @@ Rails.application.routes.draw do
 
   get 'admin/catalogo'
 
+  get 'admin/import'
+
   get 'pages/mh3'
 
   root 'pages#index'

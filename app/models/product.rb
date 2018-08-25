@@ -1,8 +1,8 @@
 require 'csv'
 class Product < ApplicationRecord
-  has_many :photos
-  has_many :orders
-  has_many :users, through: :orders
+  has_many :photos, dependent: :destroy
+  has_many :orders, dependent: :destroy
+  has_many :users, through: :orders, dependen: :destroy 
   mount_uploader :ficha, ImageUploader
   def self.import(file)
     CSV.foreach(file.path, headers: true,
