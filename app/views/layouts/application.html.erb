@@ -36,6 +36,7 @@
       const numberWithCommas = (x) => {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
       }
+      
     	/* wait for images to load */
       <% if notice.present? %>
         new Noty({
@@ -52,7 +53,7 @@
       <% end %>
 
       $( document ).on('turbolinks:load', function() {
-        
+
 
         $(window).load(function() {
       		$('.sp-wrap').smoothproducts();
