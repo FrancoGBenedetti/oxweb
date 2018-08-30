@@ -72,7 +72,7 @@ class ProductsController < ApplicationController
     image = @product.ficha
     if image.try(:file).exists?
       data = open(image.url)
-      send_data data.read, type: data.content_type, x_sendfile: true, filename: @product.tipo
+      send_data data.read, type: data.content_type, x_sendfile: true, filename: @product.ficha.url.split('/')[7].split('?')[0]
     end
   end
 
@@ -80,7 +80,7 @@ class ProductsController < ApplicationController
     cad = @product.autocad
     if cad.try(:file).exists?
       data = open(cad.url)
-      send_data data.read, type: data.content_type, x_sendfile: true, filename: "#{@product.tipo}.rar"
+      send_data data.read, type: data.content_type, x_sendfile: true, filename: @product.autocad.url.split('/')[7].split('?')[0]
     end
   end
 
