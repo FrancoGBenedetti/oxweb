@@ -79,7 +79,7 @@ class ProductsController < ApplicationController
   def download_autocad
     cad = @product.autocad
     if cad.try(:file).exists?
-      data = open(image.url)
+      data = open(cad.url)
       send_data data.read, type: data.content_type, x_sendfile: true
     end
   end
