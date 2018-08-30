@@ -31,6 +31,7 @@ Rails.application.routes.draw do
 
     member do
       get 'download_ficha'
+      get 'download_autocad'
     end
   end
 

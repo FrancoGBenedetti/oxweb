@@ -76,6 +76,14 @@ class ProductsController < ApplicationController
     end
   end
 
+  def download_autocad
+    cad = @product.autocad
+    if cad.try(:file).exists?
+      data = open(image.url)
+      send_data data.read, type: data.content_type, x_sendfile: true
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
