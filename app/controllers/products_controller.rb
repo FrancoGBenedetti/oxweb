@@ -80,7 +80,7 @@ class ProductsController < ApplicationController
     cad = @product.autocad
     if cad.try(:file).exists?
       data = open(cad.url)
-      send_data data.read, type: data.content_type, x_sendfile: true, filename: @product.tipo + data.content_type
+      send_data data.read, type: data.content_type, x_sendfile: true, filename: "#{@product.tipo}.rar"
     end
   end
 
