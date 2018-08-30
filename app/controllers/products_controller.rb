@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy, :download_ficha]
-  before_action :authenticate_user!, except: [:show, :download_ficha]
+  before_action :authenticate_user!, except: [:show, :download_ficha, :download_autocad]
   layout 'admin', except: [:index, :show]
   # GET /products
   # GET /products.json
